@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5; /* Fondo más neutro y profesional */
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.whatsapp-container {
+    background-color: #ffffff; /* Fondo blanco para destacar el contenido */
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados para un diseño más moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    text-align: center;
+    transition: transform 0.3s ease; /* Suave animación para efecto de enfoque */
+}
+
+.whatsapp-container:hover {
+    transform: scale(1.02); /* Suave zoom al pasar el ratón */
+}
+
+.whatsapp-header {
+    margin-bottom: 20px;
+}
+
+.whatsapp-icon {
+    width: 500px; /* Ajusta este valor según el tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease; /* Suave animación para efectos */
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Suave aumento de tamaño al pasar el ratón */
+}
+
+.whatsapp-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    margin-bottom: 10px;
+}
+
+.profile-pic-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #25D366;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebc59;
+    transform: scale(1.05); /* Suave zoom al pasar el ratón */
+}
+
+.message-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.separator-line {
+    height: 1px;
+    background-color: #dcdcdc;
+    width: 80%;
+    margin: 0 auto 15px;
+}
+
+.no-whatsapp-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.download-link {
+    font-size: 16px;
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.download-link:hover {
+    color: #1ebc59;
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .profile-pic-large {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+
+    .whatsapp-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .download-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon {
+        width: 70px;
+    }
+
+    .profile-pic-large {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-name {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .profile-pic {
+        width: 30px;
+        height: 30px;
+    }
+
+    .download-link {
+        font-size: 12px;
+    }
+}
