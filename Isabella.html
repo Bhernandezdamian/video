@@ -72,15 +72,37 @@
 </head>
 <body>
 
-    <h1>Clic para ver videos</h1>
+<h1>Clic para ver videos</h1>
 
-    <div class="button-container">
-        <button onclick="window.location.href='Isabella1.html'">Video 1</button>
-        <button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'"> Video 2</button>
-        <button onclick="window.location.href='Isabella2.html'"> Video 3</button>
-        <button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'"> Video 4</button>
-        <button onclick="window.location.href='Isabella3.html'"> Video 5</button>
-    </div>
+<div class="button-container" id="buttonContainer"></div>
+
+<script>
+    // Array con los botones
+    const buttons = [
+        `<button onclick="window.location.href='Isabella1.html'">Ver Video </button>`,
+        `<button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'">Ver Video</button>`,
+        `<button onclick="window.location.href='Isabella2.html'">Ver Video</button>`,
+        `<button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'">Ver Video</button>`,
+        `<button onclick="window.location.href='Isabella3.html'">Ver Video</button>`
+    ];
+
+    // Función para mezclar los botones aleatoriamente
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Mezcla los botones
+    shuffle(buttons);
+
+    // Inserta los botones mezclados en el contenedor
+    const buttonContainer = document.getElementById('buttonContainer');
+    buttons.forEach(button => {
+        buttonContainer.innerHTML += button;
+    });
+</script>
 
 </body>
 </html>
