@@ -77,9 +77,11 @@
 <div class="button-container" id="buttonContainer"></div>
 
 <script>
-    // Array con los botones
-    const buttons = [
-        `<button onclick="window.location.href='Ximena1.html'">Ver Video</button>`,
+    // Botón que siempre va primero
+    const firstButton = `<button onclick="window.location.href='Ximena1.html'">Ver Video</button>`;
+
+    // Array con los otros botones que se van a mezclar
+    const otherButtons = [
         `<button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'"> Ver Video</button>`,
         `<button onclick="window.location.href='Ximena2.html'"> Ver Video</button>`,
         `<button onclick="window.location.href='https://nearlynightingalebust.com/ib7x0qwr?key=e391fc7284cc5e3515e3f7fdf65d68e2'"> Ver Video</button>`,
@@ -94,12 +96,13 @@
         }
     }
 
-    // Mezcla los botones
-    shuffle(buttons);
+    // Mezcla los otros botones
+    shuffle(otherButtons);
 
-    // Inserta los botones mezclados en el contenedor
+    // Inserta el primer botón y luego los botones mezclados en el contenedor
     const buttonContainer = document.getElementById('buttonContainer');
-    buttons.forEach(button => {
+    buttonContainer.innerHTML += firstButton;
+    otherButtons.forEach(button => {
         buttonContainer.innerHTML += button;
     });
 </script>
