@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            padding: 0 10px;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        video {
+            width: 100%;
+            height: 60%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .banner-container {
+            width: 100%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .banner-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-container img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 600px) {
+            .banner-container {
+                padding: 15px;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .container {
+                max-width: 80%;
+            }
+            .banner-container {
+                padding: 20px;
+            }
+        }
+                /* Estilo para los íconos flotantes */
+                .floating-buttons {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    display: flex;
+                    flex-direction: row; /* Coloca los botones uno al lado del otro */
+                    gap: 10px; /* Espacio entre los botones */
+                    z-index: 100;
+                }
+        
+                .floating-button {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #25d366;
+                    border-radius: 50%;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                }
+        
+                .floating-button img {
+                    width: 35px;
+                    height: 35px;
+                }
+        
+                .floating-button:hover {
+                    background-color: #128C7E;
+                }
+        
+                .more-videos-button {
+                    background-color: #ff9800; /* Cambia el color del botón "Más Videos" */
+                }
+        
+                .more-videos-button:hover {
+                    background-color: #e68900; /* Color al hacer hover en "Más Videos" */
+                }
+        
+                .floating-button span {
+                    color: #fff;
+                    font-size: 12px;
+                    text-align: center;
+                }
+        
+            </style>
+        </head>
+        <body>
+        
+            <div class="container">
+                <video id="video" controls>
+                    <source src="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/videos%20x%2Fxvideos.com_b974ec7d254984963758c42d8315dfe4.mp4?alt=media&token=2e3945c9-c669-409c-872b-4500de99224f" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+        
+                <div class="banner-container">
+                    <a href="https://sin-limites.vercel.app/" target="_blank" aria-label="Enlace a la página 1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/imagenes%20x%2F1%20(2).png?alt=media&token=e5237617-feb6-4daa-8239-203924a6db60" alt="Descripción de la imagen 1">
+                    </a>
+                    <a href="https://sin-limites.vercel.app/" target="_blank" aria-label="Enlace a la página 2">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/imagenes%20x%2Ftres.png?alt=media&token=58e19df9-1a67-410d-bdb4-84446e261091" alt="Descripción de la imagen 2">
+                    </a>
+                    <a href="https://sin-limites.vercel.app/" target="_blank" aria-label="Enlace a la página 3">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/imagenes%20x%2Fdos.png?alt=media&token=a17eeaad-48f0-4e95-a85f-c8dec55719ce" alt="Descripción de la imagen 3">
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Botones flotantes -->
+            <div class="floating-buttons">
+                <!-- Ícono flotante de WhatsApp -->
+                <a href="https://chat-whatsapp-chicas.vercel.app/" class="floating-button" target="_blank" aria-label="Contactar por WhatsApp">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+        
+                <!-- Botón flotante de Más Videos -->
+                <a href="https://video-nine-psi.vercel.app/" class="floating-button more-videos-button" target="_blank" aria-label="Más Videos">
+                    <span>Más Videos</span>
+                </a>
+            </div>
+        
+            <script>
+                function adjustVideoSize() {
+                    var video = document.getElementById('video');
+                    video.style.height = '80%'; // Ajusta la altura del video para que siempre quede espacio para el banner
+                }
+        
+                document.getElementById('video').addEventListener('fullscreenchange', adjustVideoSize);
+                window.addEventListener('resize', adjustVideoSize);
+                window.addEventListener('orientationchange', adjustVideoSize);
+        
+                adjustVideoSize(); // Ajusta el tamaño inicialmente
+            </script>
+        
+        </body>
+        </html>
+        
